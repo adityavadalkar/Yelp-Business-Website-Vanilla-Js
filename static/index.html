@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "../static/styles/styles.css">
+    <title>
+        Business page
+    </title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="../static/script.js"></script>
+    <div class="card">
+        <div class="banner">
+            <h3>Business Search</h3>
+            <p id="banner-line">Fill out the form to get businesses near you!</p>
+        </div>
+        <div class="search">
+            <form id="business" onsubmit="handleSubmit(event)">
+                <div class="row-1">
+                    <label for="keyword">Keyword<span>*</span></label><br>
+                    <input type="text" id="keyword" name="keyword" required/><br>
+                </div>
+                <div class="row-2">
+                    <label for="distance">Distance(miles)</label>
+                    <input type="text" id="distance" name="distance" value="10">
+                </div>
+                <div class="row-2" style="float:right; margin-right:20%;">
+                    <label for="category" style="display: inline;">Category<span>*</span></label><br>
+                    <select id="category" style="margin-top: 10px;" name="category">
+                    <option value="all">Default</option>
+                    <option value="arts">Arts & Entertainment</option>
+                    <option value="health">Health & Medical</option>
+                    <option value="hotelstravel">Hotels & Travel</option>
+                    <option value="food">Food</option>
+                    <option value="professional">Professional Services</option>
+                    </select>
+                </div>
+                <div class="row-3">
+                    <label for="location">Location<span>*</span></label><br>
+                    <input type="text" id="location" name="location" required>
+                </div>
+                <hr style="color:#677695; width:91%;text-align:left; margin-left: 0px; margin-top:10px">
+                <div class="check-box">
+                    <label for="vehicle1">Want us to auto-detect your location? Check here</label>
+                    <input type="checkbox" id="box" name="box" value="box" onchange="checkBox()">
+                </div>          
+                <button id="submit" value="SUBMIT">SUBMIT</button>
+                <button id="clear" value="CLEAR" onclick="clearFields()">CLEAR</button>
+            </form>
+        </div>
+    </div>
+    <div class="no-records">
+        
+    </div>
+    <div class="results" id="results">
+        
+    </div>
+    <div id="b-card">
+    
+    </div>
+
+</body>
